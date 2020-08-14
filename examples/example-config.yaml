@@ -1,0 +1,23 @@
+events:
+  # Initialization event, which will be run before all other events.
+  - id: init
+    type: init
+    action: init
+    commands:
+      - echo "Install some things."
+  - id: Execute scripts on container start
+    type: container
+    action: start
+    attributes: 
+      name: my-container
+    commands:
+      - echo "my-container started"
+      - docker ps | grep -q 'my-container'
+  - id: Execute scripts on container stop
+    type: container
+    action: die
+    attributes: 
+      name: my-container
+    commands:
+      - echo "my-container stopped"
+      - docker ps | grep -q "my-container"
