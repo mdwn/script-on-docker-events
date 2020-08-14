@@ -6,6 +6,9 @@ go:
 script:
   - make
 
+after_success:
+  - docker build -t meowfaceman/script-on-docker-events .
+
 deploy:
   provider: script
   script: bash scripts/dockerhub_push.sh
