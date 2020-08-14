@@ -5,3 +5,9 @@ go:
 
 script:
   - make
+
+deploy:
+  provider: script
+  script: bash scripts/dockerhub_push.sh
+  on:
+    branch: master
