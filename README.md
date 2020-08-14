@@ -1,5 +1,7 @@
 # Script on Docker Events
 
+[![Build Status](https://travis-ci.com/meowfaceman/script-on-docker-events.svg?branch=master)](https://travis-ci.com/meowfaceman/script-on-docker-events)
+
 Script on Docker Events is a small utility that will execute a set of commands when a Docker event occurs.
 I made this to automate a few things on my Unraid server. Rather than maintain your own Docker container for
 specific applications on Unraid, this should allow you to rely on the existing community applications without
